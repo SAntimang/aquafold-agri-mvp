@@ -1,0 +1,264 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AquaFold Agri - MVP | Diseño Molecular para Eficiencia Hídrica</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.0/dist/chart.umd.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.27.0.min.js" charset="utf-8"></script>
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="dna-icon">🧬</span>
+                <h1>AquaFold Agri</h1>
+            </div>
+            <nav>
+                <a href="#inicio">Inicio</a>
+                <a href="#simulador">Simulador</a>
+                <a href="#resultados">Resultados</a>
+                <a href="#impacto">Impacto</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="container">
+            <h2 class="hero-title">Plataforma Deeptech de Diseño Molecular</h2>
+            <p class="hero-subtitle">para Eficiencia Hídrica Agrícola</p>
+            <p class="hero-description">
+                Utilizamos <strong>Inteligencia Artificial</strong>, <strong>AlphaFold</strong> 
+                y <strong>Computación Cuántica</strong> para diseñar moléculas que reducen 
+                el consumo de agua en cultivos hasta un 50%
+            </p>
+            <a href="#simulador" class="btn-primary">Iniciar Simulación</a>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="problem-section">
+        <div class="container">
+            <h2>🎯 El Problema</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <div class="stat-number">60-70%</div>
+                    <div class="stat-label">del agua dulce global usa la agricultura</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">150M</div>
+                    <div class="stat-label">personas en Latinoamérica sufren estrés hídrico</div>
+                </div>
+                <div class="stat-card">
+                    <div class="stat-number">$125B</div>
+                    <div class="stat-label">pérdidas anuales por sequías en LAC</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Simulator Section -->
+    <section id="simulador" class="simulator-section">
+        <div class="container">
+            <h2>💻 Simulador de Diseño Molecular</h2>
+            
+            <!-- Step 1: Crop Selection -->
+            <div class="step-card">
+                <h3>Paso 1: Selecciona tu Cultivo</h3>
+                <div class="crop-grid">
+                    <div class="crop-card" data-crop="uva">
+                        <span class="crop-icon">🍇</span>
+                        <h4>Uva</h4>
+                        <p>Vitis vinifera</p>
+                    </div>
+                    <div class="crop-card" data-crop="palto">
+                        <span class="crop-icon">🥑</span>
+                        <h4>Palto</h4>
+                        <p>Persea americana</p>
+                    </div>
+                    <div class="crop-card" data-crop="esparrago">
+                        <span class="crop-icon">🌿</span>
+                        <h4>Espárrago</h4>
+                        <p>Asparagus officinalis</p>
+                    </div>
+                    <div class="crop-card" data-crop="arandano">
+                        <span class="crop-icon">🫐</span>
+                        <h4>Arándano</h4>
+                        <p>Vaccinium corymbosum</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Step 2: Region Selection -->
+            <div class="step-card">
+                <h3>Paso 2: Selecciona tu Región</h3>
+                <div class="region-selector">
+                    <select id="region-select">
+                        <option value="">-- Selecciona una región --</option>
+                        <option value="chile-central">Chile Central (Valparaíso)</option>
+                        <option value="chile-norte">Chile Norte (Atacama)</option>
+                        <option value="peru-costa">Perú Costa (Ica)</option>
+                        <option value="peru-sierra">Perú Sierra (Arequipa)</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Step 3: Run Simulation -->
+            <div class="step-card">
+                <h3>Paso 3: Ejecutar Pipeline de Diseño</h3>
+                <button id="run-simulation" class="btn-primary" disabled>
+                    🚀 Iniciar Simulación AlphaFold + IA + Quantum
+                </button>
+                <div id="simulation-status" class="simulation-status"></div>
+                <div id="progress-bar" class="progress-bar">
+                    <div id="progress-fill" class="progress-fill"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Results Section -->
+    <section id="resultados" class="results-section" style="display: none;">
+        <div class="container">
+            <h2>📊 Resultados de Simulación</h2>
+            
+            <!-- Pipeline Visualization -->
+            <div class="pipeline-viz">
+                <h3>Pipeline de Descubrimiento Molecular</h3>
+                <div class="pipeline-steps">
+                    <div class="pipeline-step completed">
+                        <div class="step-icon">1</div>
+                        <div class="step-content">
+                            <h4>AlphaFold Prediction</h4>
+                            <p>23 proteínas objetivo identificadas</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-step completed">
+                        <div class="step-icon">2</div>
+                        <div class="step-content">
+                            <h4>IA Generativa</h4>
+                            <p>15,000 moléculas candidatas generadas</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-step completed">
+                        <div class="step-icon">3</div>
+                        <div class="step-content">
+                            <h4>Simulación Cuántica</h4>
+                            <p>2,340 interacciones calculadas</p>
+                        </div>
+                    </div>
+                    <div class="pipeline-step completed">
+                        <div class="step-icon">4</div>
+                        <div class="step-content">
+                            <h4>Ranking Multi-Criterio</h4>
+                            <p>Top 10 moléculas seleccionadas</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Molecules -->
+            <div class="molecules-grid">
+                <h3>🏆 Top 10 Moléculas Candidatas</h3>
+                <div id="molecules-container"></div>
+            </div>
+
+            <!-- Charts -->
+            <div class="charts-grid">
+                <div class="chart-container">
+                    <h3>Distribución de Eficiencia (WUE Score)</h3>
+                    <canvas id="wue-chart"></canvas>
+                </div>
+                <div class="chart-container">
+                    <h3>Comparación de Métricas</h3>
+                    <canvas id="radar-chart"></canvas>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Impact Section -->
+    <section id="impacto" class="impact-section">
+        <div class="container">
+            <h2>🌍 Impacto Proyectado</h2>
+            <div class="impact-grid">
+                <div class="impact-card">
+                    <span class="impact-icon">💧</span>
+                    <h3>20-50%</h3>
+                    <p>Reducción en consumo de agua</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-icon">🌱</span>
+                    <h3>70-90%</h3>
+                    <p>Menos toxicidad ambiental</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-icon">💵</span>
+                    <h3>$5K-15K</h3>
+                    <p>Ahorro USD/hectárea/año</p>
+                </div>
+                <div class="impact-card">
+                    <span class="impact-icon">🌎</span>
+                    <h3>500K+</h3>
+                    <p>Hectáreas potenciales en 5 años</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technology Stack -->
+    <section class="tech-section">
+        <div class="container">
+            <h2>💻 Stack Tecnológico</h2>
+            <div class="tech-grid">
+                <div class="tech-card">
+                    <h4>AlphaFold 3</h4>
+                    <p>Predicción de estructuras proteicas con precisión cuasi-experimental</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Generative AI</h4>
+                    <p>Modelos transformer para generar candidatos moleculares optimizados</p>
+                </div>
+                <div class="tech-card">
+                    <h4>Quantum Computing</h4>
+                    <p>Simulaciones VQE para interacciones molécula-proteína de alta fidelidad</p>
+                </div>
+                <div class="tech-card">
+                    <h4>ML Ensemble</h4>
+                    <p>Ranking multi-criterio con XGBoost + Random Forest + Neural Networks</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>AquaFold Agri</h3>
+                    <p>Innovación molecular para la agricultura sostenible</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Enlaces</h4>
+                    <a href="https://github.com/SAntimang/aquafold-agri-mvp" target="_blank">GitHub</a>
+                </div>
+                <div class="footer-section">
+                    <h4>Contacto</h4>
+                    <p>Sebastian Antimang</p>
+                    <p>Le Wagon Bootcamp 2026</p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>🌱 Cada gota de agua cuenta | 🧬 Cada molécula diseñada suma</p>
+                <p>Hecho con ❤️ para Le Wagon Bootcamp 2026</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="app.js"></script>
+</body>
+</html>
